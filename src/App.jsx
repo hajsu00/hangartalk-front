@@ -1,9 +1,12 @@
-import TextInput from './components/TextInput';
+import Counter from './components/Counter';
 
 function App() {
   return (
+    // <div>
+    //   <TextInput />
+    // </div>
     <div>
-      <TextInput />
+      <Counter />
     </div>
   );
 }
