@@ -1,31 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Provider} from 'react-redux';
-import createStore from './reducks/store/store';
 import { ConnectedRouter } from 'connected-react-router';
+import { RecoilRoot } from 'recoil';
 import * as History from 'history';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const history = History.createBrowserHistory();
-export const store = createStore();
 
-// ReactDOM.render(
-//   <Provider store={store}>
-//     <ConnectedRouter history={history}>
-//       <App />
-//     </ConnectedRouter>
-//   </Provider>,
-//   document.getElementById('root'),
-// );
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <Provider store={store}>
+ReactDOM.render(
+  <RecoilRoot>
     <ConnectedRouter history={history}>
       <App />
     </ConnectedRouter>
-  </Provider>,
-  root
+  </RecoilRoot>,
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
