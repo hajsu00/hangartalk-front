@@ -1,12 +1,12 @@
-import {Route, Switch} from 'react-router';
+import {Route, Routes} from 'react-router-dom';
 import {Login, Home} from './templates';
 
 const Router = () => {
   return (
-    <Switch>
-      <Route exact path={"/login"} component={Login} />
-      <Route exact path={"(/)?"} component={Home} />
-    </Switch>
+    <Routes>
+      <Route path={"/login"}  element={<Login/>} />
+      <Route path={"/"} element={<Home/>} />
+    </Routes>
   )
 }
 export default Router

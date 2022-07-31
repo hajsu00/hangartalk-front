@@ -1,18 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ConnectedRouter } from 'connected-react-router';
+import {BrowserRouter as Router} from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
-import * as History from 'history';
+// import * as History from 'history';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const history = History.createBrowserHistory();
+
+// const history = History.createBrowserHistory();
 
 ReactDOM.render(
   <RecoilRoot>
-    <ConnectedRouter history={history}>
+    {/* <ConnectedRouter history={history}> */}
+    <Router>
       <App />
-    </ConnectedRouter>
+    </Router>
+    {/* </ConnectedRouter> */}
   </RecoilRoot>,
   document.getElementById('root')
 );
