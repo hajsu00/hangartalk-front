@@ -5,17 +5,16 @@ import { RecoilRoot } from 'recoil';
 // import * as History from 'history';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './index.css';
 
 
 // const history = History.createBrowserHistory();
 
 ReactDOM.render(
   <RecoilRoot>
-    {/* <ConnectedRouter history={history}> */}
     <Router>
       <App />
     </Router>
-    {/* </ConnectedRouter> */}
   </RecoilRoot>,
   document.getElementById('root')
 );

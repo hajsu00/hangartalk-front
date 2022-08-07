@@ -36,6 +36,7 @@ const Header = () => {
         {/* <%= link_to image_tag('hangartalk_logo.png', class: "w-64"), root_path %> */}
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
           {/* <%= yield :header_action %> */}
+          <p className="text-3xl font-bold underline">aaaa</p>
         </nav>
       </div>
     </header>
