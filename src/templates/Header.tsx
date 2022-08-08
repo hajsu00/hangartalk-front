@@ -1,5 +1,6 @@
 import { useRecoilState } from 'recoil'
 import { userState } from '../recoil/users/stores'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   const [user, setUserState] = useRecoilState(userState)
@@ -9,6 +10,10 @@ const Header = () => {
       <header className="text-gray-600 body-font">
         <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           {/* <%= link_to image_tag('hangartalk_logo.png', class: "w-64"), user_path(current_user.id) %> */}
+          <Link to="/">
+            <img src={`${process.env.PUBLIC_URL}/hangartalk_logo.png`} alt="Logo" className="w-64" />
+          </Link>
+
           <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
             <div className="relative group w-56">
               <div className="flex justify-center bg-gray-100 border-0 p-2 focus:outline-none hover:bg-gray-200 rounded text-base mt-0">
@@ -34,6 +39,9 @@ const Header = () => {
     <header className="text-gray-600 body-font">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         {/* <%= link_to image_tag('hangartalk_logo.png', class: "w-64"), root_path %> */}
+        <Link to="/">
+          <img src={`${process.env.PUBLIC_URL}/hangartalk_logo.png`} alt="Logo" className="w-64" />
+        </Link>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
           {/* <%= yield :header_action %> */}
           <p className="text-3xl font-bold underline">aaaa</p>

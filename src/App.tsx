@@ -9,7 +9,9 @@ const App = () => {
   return (
     <main>
       <Header />
+      {/* <Sidebar /> */}
       <Router />
+      {/* <Footer /> */}
     </main>
   )
 }
