@@ -3,7 +3,6 @@ import { userState } from '../recoil/users/stores'
 import { useLocation } from 'react-router-dom'
 import HeaderLogo from '../components/Header/HeaderLogo'
 import HeaderNav from '../components/Header/HeaderNav'
-// import { Link } from 'react-router-dom'
 
 const Header = () => {
   const [user, setUserState] = useRecoilState(userState)
@@ -25,20 +24,20 @@ const Header = () => {
     return (
       <header className="text-gray-600 body-font">
         <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <HeaderLogo destination="#" />
+          <HeaderLogo destination="/" />
           <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-          {currentUrl == "/users/sign_up" ?
-            <HeaderNav caption="ログイン" destination="#" currentUrl={currentUrl}/>
+          {currentUrl == "/sign_up" ?
+            <HeaderNav caption="ログイン" destination="/sign_in" currentUrl={currentUrl}/>
             : null
           }
-          {currentUrl == "/users/sign_in" ?
-            <HeaderNav caption="アカウント登録" destination="#" currentUrl={currentUrl} />
+          {currentUrl == "/sign_in" ?
+            <HeaderNav caption="アカウント登録" destination="/sign_up" currentUrl={currentUrl} />
             : null
           }
           {currentUrl == "/" ?
             <>
-              <HeaderNav caption="アカウント登録" destination="#" currentUrl={currentUrl} />
-              <HeaderNav caption="ログイン" destination="#" currentUrl={currentUrl} />
+              <HeaderNav caption="アカウント登録" destination="/sign_up" currentUrl={currentUrl} />
+              <HeaderNav caption="ログイン" destination="/sign_in" currentUrl={currentUrl} />
             </>
             : null
           }

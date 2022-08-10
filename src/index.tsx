@@ -1,15 +1,9 @@
-// import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
-// import { ConnectedRouter } from 'connected-react-router';
-// import * as History from 'history';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
-
-
-// const history = History.createBrowserHistory();
 
 ReactDOM.render(
   <RecoilRoot>
