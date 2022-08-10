@@ -1,4 +1,5 @@
 import FeatureCard from '../components/Main/Home/FeatureCard'
+import NavigationCard from '../components/Main/Home/NavigationCard'
 
 const Home = () => {
   return (
@@ -12,7 +13,7 @@ const Home = () => {
             <p className="text-xl xl:text-5xl md:text-4xl text-center lg:text-left font-bold lg:mt-6 mt-1">パイロットのための<br />フライト管理SNS</p>
           </div>
           <div className="hidden lg:flex lg:absolute lg:top-1/2 lg:left-3/4 lg:-translate-y-1/2 lg:-translate-x-1/2">
-            {/* <%= render partial: 'static_pages/navigation_card' %> */}
+            <NavigationCard />
           </div>
         </div>
         {/* <!-- コンテンツ --> */}
@@ -24,7 +25,7 @@ const Home = () => {
             text="あなたのライセンスの有効期限を管理。登録したライセンスはいつでも管理画面から確認できます。"
           />
           <FeatureCard
-            fontawesomeClass="faBookOpen"
+            fontawesomeClass="faBook"
             caption={"パイロットの\nフライトログブックを管理"}
             text="あなたのフライトログブックを登録すれば、面倒な計算作業から解放されます。"
           />
@@ -51,7 +52,7 @@ const Home = () => {
             {/* <!-- ボーダー（終わり） --> */}
             <p className="text-xl font-bold text-gray-800 leading-normal underline underline-offset-4 text-center my-2">いますぐ登録しよう！</p>
             <div className="mt-6 mx-4">
-              {/* <%= render partial: 'static_pages/navigation_card' %> */}
+              <NavigationCard />
             </div>
           </div>
         </div>

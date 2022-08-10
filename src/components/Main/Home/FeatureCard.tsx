@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faIdCard } from '@fortawesome/free-solid-svg-icons'
-import { faBookOpen } from '@fortawesome/free-solid-svg-icons'
+import { faBook } from '@fortawesome/free-solid-svg-icons'
 import { faComments } from '@fortawesome/free-solid-svg-icons'
 
 type Props = {
@@ -17,8 +17,8 @@ const FeatureCard = (props: Props) => {
           <FontAwesomeIcon icon={faIdCard} />
           : null
         }
-        {props.fontawesomeClass === "faBookOpen" ?
-          <FontAwesomeIcon icon={faBookOpen} />
+        {props.fontawesomeClass === "faBook" ?
+          <FontAwesomeIcon icon={faBook} />
           : null
         }
         {props.fontawesomeClass === "faComments" ?
@@ -27,14 +27,14 @@ const FeatureCard = (props: Props) => {
         }
       </div>
       <div className="text-base font-bold text-gray-800 text-center mt-4">
-        {props.caption.split('\n').map(text => (<div>{text}</div>))}
+        {props.caption.split('\n').map((text) => (<div>{text}</div>))}
       </div>
       {/* <!-- ボーダー（始まり） --> */}
       <div className="w-full border-b-2 border-gray-300 py-2 mx-auto"></div>
       {/* <!-- ボーダー（終わり） --> */}
       <div className="mt-8">
         <p className="text-base text-gray-800 text-center">
-        {props.text}
+          {props.text}
         </p>
       </div>
     </div>
