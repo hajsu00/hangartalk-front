@@ -1,6 +1,10 @@
 import FeatureCard from '../components/Main/Home/FeatureCard'
 import NavigationCard from '../components/Main/Home/NavigationCard'
 
+import { faIdCard } from '@fortawesome/free-solid-svg-icons'
+import { faBook } from '@fortawesome/free-solid-svg-icons'
+import { faComments } from '@fortawesome/free-solid-svg-icons'
+
 const Home = () => {
   return (
     // <!-- ヘッダー -->
@@ -18,19 +22,18 @@ const Home = () => {
         </div>
         {/* <!-- コンテンツ --> */}
         <div className="flex lg:justify-evenly justify-center flex-wrap mt-8">
-          {/* <!-- １ --> */}
           <FeatureCard
-            fontawesomeClass="faIdCard"
+            fontawesomeIcon={faIdCard}
             caption={"操縦ライセンスの\n有効期限を管理"}
             text="あなたのライセンスの有効期限を管理。登録したライセンスはいつでも管理画面から確認できます。"
           />
           <FeatureCard
-            fontawesomeClass="faBook"
+            fontawesomeIcon={faBook}
             caption={"パイロットの\nフライトログブックを管理"}
             text="あなたのフライトログブックを登録すれば、面倒な計算作業から解放されます。"
           />
           <FeatureCard
-            fontawesomeClass="faComments"
+            fontawesomeIcon={faComments}
             caption={"パイロット同士で\n交流"}
             text="登録したフライト記録をフィードにシェア。友達と共に、フライトについてとことん語り合うことができます。"
           />
