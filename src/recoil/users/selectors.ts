@@ -1,5 +1,5 @@
 import { selector } from 'recoil'
-import { userState } from './stores'
+import { userState } from './atoms'
 
 // const charCountState = selector({
 //   key: 'charCountState',

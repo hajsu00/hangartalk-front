@@ -1,5 +1,5 @@
 import { useRecoilState } from 'recoil'
-import { userState } from '../recoil/users/stores'
+import { userState } from '../recoil/users/atoms'
 import { useLocation } from 'react-router-dom'
 import HeaderLogo from '../components/Header/HeaderLogo'
 import HeaderNav from '../components/Header/HeaderNav'

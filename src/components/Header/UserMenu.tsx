@@ -1,5 +1,5 @@
 import { useRecoilState } from 'recoil'
-import { userState } from '../../recoil/users/stores'
+import { userState } from '../../recoil/users/atoms'
 
 const UserMenu = () => {
   const [user, setUserState] = useRecoilState(userState)

@@ -1,5 +1,5 @@
 import { useRecoilState } from 'recoil'
-import { userState } from '../../recoil/users/stores'
+import { userState } from '../../recoil/users/atoms'
 import { Link } from 'react-router-dom'
 
 type Props = {
