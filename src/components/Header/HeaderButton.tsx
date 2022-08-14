@@ -1,20 +1,15 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
-import { useNavigate } from "react-router-dom";
 
 type Props = {
   caption: string
-  destination: string
   currentUrl: string
+  onClick: React.MouseEventHandler<HTMLButtonElement>
 }
 
-const HeaderNav = (props: Props) => {
-  const navigate = useNavigate();
-  const toDestination = () => {
-    navigate(props.destination)
-  }
+const HeaderButton = (props: Props) => {
   return (
-    <button onClick={toDestination} className="flex justify-center bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-base mt-0 ml-10" >
+    <button onClick={props.onClick} className="flex justify-center bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-base mt-0 ml-10" >
       <div className="flex flex-row my-auto">
         {props.caption}
         {props.currentUrl != "/"
@@ -26,4 +21,4 @@ const HeaderNav = (props: Props) => {
   )
 }
 
-export default HeaderNav
+export default HeaderButton

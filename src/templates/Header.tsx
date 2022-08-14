@@ -2,13 +2,21 @@ import { useRecoilState } from 'recoil'
 import { userState } from '../recoil/users/atoms'
 import { useLocation } from 'react-router-dom'
 import HeaderLogo from '../components/Header/HeaderLogo'
-import HeaderNav from '../components/Header/HeaderNav'
+import HeaderButton from '../components/Header/HeaderButton'
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [user, setUserState] = useRecoilState(userState)
   const isSignedIn = user.isSignedIn
   const location = useLocation();
   const currentUrl = location.pathname
+  const navigate = useNavigate();
+  const toSignInPage = () => {
+    navigate('/sign_in')
+  };
+  const toSignUpPage = () => {
+    navigate('/sign_up')
+  };
 
   if (isSignedIn) {
     return (
@@ -16,7 +24,7 @@ const Header = () => {
         <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <HeaderLogo destination="#" />
           <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <HeaderNav caption="ログイン" destination="#" currentUrl={currentUrl} />
+            <HeaderButton caption="ログイン" onClick={toSignInPage} currentUrl={currentUrl} />
           </nav>
         </div>
       </header>
@@ -28,17 +36,17 @@ const Header = () => {
           <HeaderLogo destination="/" />
           <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
           {currentUrl == "/sign_up"
-            ? <HeaderNav caption="ログイン" destination="/sign_in" currentUrl={currentUrl}/>
+            ? <HeaderButton caption="ログイン" onClick={toSignInPage} currentUrl={currentUrl}/>
             : null
           }
           {currentUrl == "/sign_in"
-            ? <HeaderNav caption="アカウント登録" destination="/sign_up" currentUrl={currentUrl} />
+            ? <HeaderButton caption="アカウント登録" onClick={toSignUpPage} currentUrl={currentUrl} />
             : null
           }
           {currentUrl == "/"
             ? <>
-                <HeaderNav caption="アカウント登録" destination="/sign_up" currentUrl={currentUrl} />
-                <HeaderNav caption="ログイン" destination="/sign_in" currentUrl={currentUrl} />
+                <HeaderButton caption="アカウント登録" onClick={toSignUpPage} currentUrl={currentUrl} />
+                <HeaderButton caption="ログイン" onClick={toSignInPage} currentUrl={currentUrl} />
               </>
             : null
           }
