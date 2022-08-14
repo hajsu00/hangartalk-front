@@ -1,13 +1,15 @@
+// import { useNavigate } from "react-router-dom";
+
 type Props = {
   caption: string
   btnClass: string
-  onClick: (event: React.MouseEvent<HTMLInputElement>) => void
+  onClick: React.MouseEventHandler<HTMLButtonElement>
 }
 
 const LargeButton = (props: Props) => {
-
+  // const navigate = useNavigate();
   return (
-    <button onClick={() => props.onClick} className={props.btnClass}>
+    <button onClick={props.onClick} className={props.btnClass}>
       {props.caption}
     </button>
   )
