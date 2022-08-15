@@ -1,10 +1,11 @@
 import {Route, Routes} from 'react-router-dom';
-import {Login, Home} from './templates';
+import {SignIn, SignUp, Home} from './templates';
 
 const Router = () => {
   return (
     <Routes>
-      <Route path={"/login"}  element={<Login/>} />
+      <Route path={"/sign_in"}  element={<SignIn/>} />
+      <Route path={"/sign_up"}  element={<SignUp/>} />
       <Route path={"/"} element={<Home/>} />
     </Routes>
   )

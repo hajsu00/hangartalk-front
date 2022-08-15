@@ -1,22 +1,19 @@
-// import React from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter as Router} from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
-// import * as History from 'history';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
-
-// const history = History.createBrowserHistory();
+import './index.css';
 
 ReactDOM.render(
-  <RecoilRoot>
-    {/* <ConnectedRouter history={history}> */}
-    <Router>
-      <App />
-    </Router>
-    {/* </ConnectedRouter> */}
-  </RecoilRoot>,
+  <React.StrictMode>
+    <RecoilRoot>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </RecoilRoot>
+  </React.StrictMode>,
   document.getElementById('root')
 );
 
