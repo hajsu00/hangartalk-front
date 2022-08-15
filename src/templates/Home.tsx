@@ -1,9 +1,5 @@
-import FeatureCard from '../components/Main/Home/FeatureCard'
-import NavigationCard from '../components/Main/Home/NavigationCard'
-
-import { faIdCard } from '@fortawesome/free-solid-svg-icons'
-import { faBook } from '@fortawesome/free-solid-svg-icons'
-import { faComments } from '@fortawesome/free-solid-svg-icons'
+import { FeatureCard, NavigationCard } from '../components/Main/Home'
+import { faIdCard, faBook, faComments } from '@fortawesome/free-solid-svg-icons'
 
 const Home = () => {
   return (

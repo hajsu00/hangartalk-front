@@ -1,9 +1,6 @@
 import {useCallback, useState} from 'react';
-import Input from '../components/Shared/Input';
-import Label from '../components/Shared/Label';
-import LargeButton from '../components/Shared/LargeButton';
+import { Input, Label, LargeButton } from '../components/Shared';
 import { Link } from 'react-router-dom';
-
 
 const SignIn = () => {
   const [email, setEmail] = useState(""),

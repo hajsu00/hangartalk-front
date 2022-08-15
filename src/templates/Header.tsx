@@ -1,9 +1,7 @@
 import { useRecoilState } from 'recoil'
 import { userState } from '../recoil/users/atoms'
-import { useLocation } from 'react-router-dom'
-import HeaderLogo from '../components/Header/HeaderLogo'
-import HeaderButton from '../components/Header/HeaderButton'
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from 'react-router-dom'
+import { HeaderLogo, HeaderButton } from '../components/Header'
 
 const Header = () => {
   const [user, setUserState] = useRecoilState(userState)
@@ -35,15 +33,15 @@ const Header = () => {
         <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <HeaderLogo destination="/" />
           <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-          {currentUrl == "/sign_up"
+          {currentUrl === "/sign_up"
             ? <HeaderButton caption="ログイン" onClick={toSignInPage} currentUrl={currentUrl}/>
             : null
           }
-          {currentUrl == "/sign_in"
+          {currentUrl === "/sign_in"
             ? <HeaderButton caption="アカウント登録" onClick={toSignUpPage} currentUrl={currentUrl} />
             : null
           }
-          {currentUrl == "/"
+          {currentUrl === "/"
             ? <>
                 <HeaderButton caption="アカウント登録" onClick={toSignUpPage} currentUrl={currentUrl} />
                 <HeaderButton caption="ログイン" onClick={toSignInPage} currentUrl={currentUrl} />
