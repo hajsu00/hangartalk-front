@@ -6,8 +6,8 @@ import { userState } from './recoil/users/atoms'
 const App = () => {
   const [user, setUserState] = useRecoilState(userState)
   console.log(user)
-  // const isSignedIn = user.isSignedIn
-  const isSignedIn = true
+  const isSignedIn = user.isSignedIn
+  // const isSignedIn = true
   if (isSignedIn) {
     return (
       <main>

@@ -1,10 +1,11 @@
 type Props = {
   caption: string
+  className: string
 }
 
 const Label = (props: Props) => {
   return (
-    <label className="text-gray-800 text-sm sm:text-base">
+    <label className={props.className}>
       {props.caption}
     </label>
   )

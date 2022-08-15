@@ -1,5 +1,5 @@
 import {useCallback, useState} from 'react';
-import { Input, Label, LargeButton } from '../components/Shared';
+import { Input, Label, LargeButton, CheckBox } from '../components/Shared';
 import { Link } from 'react-router-dom';
 
 const SignIn = () => {
@@ -16,21 +16,20 @@ const SignIn = () => {
           <div className="max-w-lg border border-gray-300 rounded-lg shadow mx-auto">
             <div className="flex flex-col gap-4 p-4 md:p-8">
               <div>
-                <Label caption="メールアドレス *" />
-                <Input type="email" value={email} className="text-input" required={true} onChange={inputEmail}
+                <Label caption="メールアドレス *" className="text-gray-800 text-base" />
+                <Input type="email" value={email} required={true} onChange={inputEmail}
                 />
               </div>
 
               <div>
-                <Label caption="パスワード（半角英数字で６文字以上）*" />
-                <Input type="password" value={password} className="text-input" required={true} onChange={inputPassword}
+                <Label caption="パスワード（半角英数字で６文字以上）*" className="text-gray-800 text-base" />
+                <Input type="password" value={password} required={true} onChange={inputPassword}
                 />
 
-              <div className="flex my-auto">
-                  <Input type="checkbox" className="" required={false}
-                  />
+                <div className="flex my-auto">
+                  <CheckBox />
                   <div className="ml-2">
-                    <Label caption="次回から自動でログインする" />
+                    <Label caption="次回から自動でログインする" className="text-gray-800 text-sm" />
                   </div>
                 </div>
               </div>
